@@ -5,8 +5,11 @@
 </head>
 <body>
 
-<h1>Simple web page - Automatic refresh 6</h1>
-<p>It's a simple web page for testing nginx pod rollout. Finally !</p>
+<h1>Simple web page for testing a Git rollout action on determined deployments</h1>
+<p>This page is shown as part of a PoC on which a git-rollout-operator looks for changes in a git repo, and then rollouts a defined deployment.</p>
+<p>In our case the deployment is a nginx which reloads the content of the exposed html with an initcontainer which clones the repo content on the publich html folder.</p>
+<p>When a git commit is detected, the operator triggers a rollout which in turns executes the initContainer command.</p>
+<p>We set the webpage to reload every 5 secs so, for our PoC we can see how the pages automatically updates the content.</p>
 
 </body>
 </html>
